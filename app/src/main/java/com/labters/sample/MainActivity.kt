@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         )
         imageView.setOnClickListener {
             StackImageViewer.openStackViewer(
-                this,
-                listOf(
+                activity = this,
+                list = listOf(
                     ImageData(ResourceType.UrlResource(TEST_URL)),
                     ImageData(ResourceType.AppResource(R.drawable.ic_launcher_foreground)),
                     ImageData(ResourceType.UrlResource(TEST_URL_2))
