@@ -1,0 +1,3 @@
+rootProject.name='Sample Viewer'
+include ':app'
+include ':imagestackviewer'

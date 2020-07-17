@@ -1,0 +1,28 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.labters.imagestackviewer.data.ImageData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/iv_zoomage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            app:isCenterCrop="@{false}"
+            app:src="@{item.image}"
+            tools:ignore="PrivateResource"
+            tools:src="@drawable/abc_vector_test"
+            tools:tint="#000000" />
+    </LinearLayout>
+</layout>
