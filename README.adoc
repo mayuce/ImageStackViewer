@@ -3,7 +3,7 @@ This library provides an activity to show images
 
 image::https://img.shields.io/:license-Apache%202.0-yellowgreen.svg[]
 
-image::https://img.shields.io/badge/version-1.0.0-green.svg[]
+image::https://img.shields.io/badge/version-1.1.0-green.svg[]
 
 image::https://img.shields.io/badge/minSDK-19-blue.svg[]
 
@@ -32,7 +32,7 @@ Add lines below to your *app* level build.gradle
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.jsibbold:zoomage:1.3.1'
-    implementation 'com.github.mayuce:ImageStackViewer:1.0.0'
+    implementation 'com.github.mayuce:ImageStackViewer:1.1.0'
 ----
 
 And Sync the gradle
@@ -69,4 +69,4 @@ There is 3 type of images supportes. These are *app resource, URL & Base64*.
 
 ## TO-DO
 
-- Changing background color with image.
+- Changing background color with image. [Added with v1.1.0 by link:https://github.com/faranjit[@faranjit]]
