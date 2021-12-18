@@ -53,6 +53,7 @@ fun ImageView.srcGlide(data: Any?, isCenterCrop: Boolean?) {
         return
     }
 
+    val imageView = this
     var options = RequestOptions()
 
     if (isCenterCrop != false) {
@@ -65,6 +66,9 @@ fun ImageView.srcGlide(data: Any?, isCenterCrop: Boolean?) {
     resource?.let {
         Glide
             .with(context)
+            .apply {
+                clear(imageView)
+            }
             .load(resource)
             .apply(options)
             .addListener(object : RequestListener<Drawable> {
@@ -75,7 +79,7 @@ fun ImageView.srcGlide(data: Any?, isCenterCrop: Boolean?) {
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    ImageViewExtensions.onImageReady(this@srcGlide, resource)
+                    ImageViewExtensions.onImageReady(imageView, resource)
                     return false
                 }
 
